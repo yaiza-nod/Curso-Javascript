@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch en JS</title>
+    <script type="text/javascript">
+
+        var premiado = false;
+
+        console.warn('Switch premiado.');
+
+        switch (premiado) {
+
+            case true: 
+
+                console.warn('¡Has sido premiado!');
+                break;
+
+            case false:
+
+                console.error('No has sido premiado :(');
+                break;
+        }
+
+        console.warn('Switch semana.');
+
+        var dia = 6;
+
+        switch (dia) {
+
+            case 1: 
+
+                console.log('Es lunes.');
+                break;
+
+            case 2:
+
+                console.log('Es martes.');
+                break;
+            
+            case 3:
+
+                console.log('Es miércoles.');
+                break;
+
+            case 4:
+
+                console.log('Es jueves.');
+                break;
+
+            case 5:
+
+                console.log('Es viernes.');
+                break;
+
+            default:
+
+                console.log('Día ' + dia +' es: Fin de semana.');
+                break;
+
+        }
+
+
+        console.info('Aquí va el resto del programa~');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
