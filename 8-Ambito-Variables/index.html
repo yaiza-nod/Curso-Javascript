@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito de las variables en JS</title>
+
+    <script type="text/javascript">
+
+    var miNombre = 'Yaiza';
+
+        function nombrar() {
+            var nombre = 'Yaiza Fernández';
+            console.log(nombre);
+
+            function seguirNombrando() {
+                console.log(miNombre);
+            }
+
+            seguirNombrando();
+        }
+
+        nombrar();
+
+        //console.log(nombre); -> no puedo acceder a esta variable porque se encuentra en un ámbito local, no en el ámbito global
+
+        console.log(miNombre); // esto funciona porque si no pongo var, lo creo sí o sí en el ambito global
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
