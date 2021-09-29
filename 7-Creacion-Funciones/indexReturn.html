@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importancia return en JS</title>
+
+    <script type="text/javascript">
+
+        function saludar (nombre) {
+
+            return 'Hola ' + nombre + '!!! :)';
+        }
+
+        var nombre = prompt('Introduce tu nombre: ');
+
+        if (nombre && nombre.trim()) {
+            alert(saludar(nombre));
+
+        } else {
+            alert('No has introducido un nombre. No te puedo saludar.')
+        }
+
+        // funcion suma cuadrados:
+
+        function sumaCuadrados(a, b) {
+
+            return a*a + b*b;
+        }
+
+        var a = parseInt(prompt('Introduce el primer número: '));
+        var b = parseInt(prompt('Introduce el segundo número: '));
+
+        if ((typeof a === "number") && (typeof b === "number")) {
+            alert(sumaCuadrados(a, b));
+
+        } else {
+            alert('El primer/segundo número no es de tipo number. No puedo sumar sus cuadrados.')
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
