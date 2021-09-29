@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de funciones en JS</title>
+
+    <script type="text/javascript">
+
+    // función saludar, utilizo prompt y alert: 
+
+        function saludar(nombre, profesion) {
+
+            alert('Hola ' + nombre + '!! :) Profesión: ' + profesion);
+        }
+
+        var nombre = prompt('Introduce tu nombre: ');
+        var profesion = prompt('Introduce tu profesión: ');
+
+        if (nombre && nombre.trim() && profesion && profesion.trim()) {
+            saludar(nombre, profesion);
+
+        } else {
+            alert('No has introducido un nombre y/o profesión. No te puedo saludar.')
+        }
+
+        // otra, también con prompt y alert: 
+
+        function mayusculas (texto) {
+
+            return texto.toUpperCase();
+        }
+
+        var texto = prompt('Introduce un texto para convertirlo a mayúsculas: ');
+
+        if (texto && texto.trim()) {
+            alert(mayusculas(texto));
+
+        } else {
+            alert('No has introducido un texto. No puedo convertirlo a mayúsculas.')
+        }
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
