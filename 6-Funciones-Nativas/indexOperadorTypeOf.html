@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Nativas: Operador TypeOf</title>
+
+    <script type="text/javascript">
+
+        // typeof con los tipos que conocemos (number, string, boolean)
+
+        console.log(typeof "Hola");
+        console.log(typeof 36);
+
+        var nombre = 'Yaiza';
+        console.log(nombre + ' es de tipo:', typeof nombre);
+
+        var booleano = true;
+        console.log(booleano + ' es de tipo:', typeof booleano);
+
+        // con un objeto, adelanto de los objetos
+
+        var objeto = {nombre: 'Yaiza'}
+
+        console.log(objeto.nombre);
+        console.log(typeof objeto);
+
+        // matrices/arrays
+
+        var numeros = [1, 2, 3, 4, 5];
+
+        console.log('Posición 0: ', numeros[0]);
+        console.log('Posición 1: ', numeros[1]);
+
+        console.log(typeof numeros); // es de tipo objeto, no de tipo array, los arrays son objetos en js
+
+        // undefined:
+
+        console.log(undefined);
+
+        var apellido;
+
+        console.log(typeof apellido);
+
+        apellido = 'Fernández';
+
+        console.log(typeof apellido);
+
+        // null: 
+
+        console.log(typeof null); // marca tipo objeto, pero es de tipo null, no se soluciona por no romper muchas webs
+
+        // Utilidad del typeof:
+
+        var respuesta = 'Yaiza';
+
+        // quiero que devuelva string
+
+        if (typeof respuesta === "string") { // comparación estricta con tres = (===), quiero que sea igual en valor Y tipo
+            console.log('OK');
+        } else {
+
+            console.error('EL tipo de valor es ' + typeof respuesta);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
