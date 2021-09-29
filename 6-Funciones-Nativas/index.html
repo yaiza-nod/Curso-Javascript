@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Nativas: Alert, Confirm y Prompt</title>
+
+    <script type="text/javascript">
+
+        // Función alert:
+
+        console.warn('Alert'); // muestra mensaje en la pantalla al usuario
+
+        var mensaje = 'Usando la función Alert.';
+
+        alert(mensaje);
+        alert('Puedo poner más de un alert.');
+
+        // Función confirm:
+        
+        console.warn('Confirm');
+
+        //console.log(confirm('¿Desea proceder?')); // confirm retorna valor booleano en función de respuesta usuario
+
+        var confirmar = confirm('¿Seguro que desea proceder?'); // crea variable booleana con respuesta
+
+        if (confirmar) {
+            console.log('Borrando cuenta de usuario...');
+        }
+        else {
+            console.log('Acción cancelada.');
+        }
+
+        // Función prompt:
+        
+        console.warn('Prompt'); // solicita una respuesta a un usuario previo un mensaje
+
+        //console.log(prompt('Introduce tu nombre de usuario:')); // puedo mostrar el resultado, devuelve lo que el usuario haya escrito
+
+        var usuario = prompt('Introduce tu nombre de usuario:');
+
+        console.log('Nombre de usuario: ', usuario);
+
+        // Probando funciones juntas: 
+
+        if (usuario && usuario.trim()) { // si se ha introducido algo y además, después de eliminar espacios sigue habiendo un valor
+
+            var confirmar = confirm('¿Es ' + usuario + ' correcto?');
+
+            if (confirmar) {
+                alert('Usuario correcto.');
+
+            } else {
+                alert('Usuario incorrecto.');
+            }
+
+        } else { // si la cadena está vacía
+            console.error('No has introducido un usuario');
+        }
+
+        /*
+        Notas:
+        Las cadenas de texto con texto retornan true,
+        las cadenas de texto vacías retornan false.
+        El usuario.trim() del primer if es necesario porque si escribo tres espacios, se interpretará que he introducido
+        un usuario cuando no es así.
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
