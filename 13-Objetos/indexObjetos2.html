@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos 1 en JS</title>
+
+    <script type="text/javascript">
+
+        // Las matrices son objetos
+
+        var opinion = "Es uno de mis libros favoritos :)";
+
+        var libro = { // propiedades y valores del objeto
+
+            titulo: "IT",
+            autor: "Stephen King",
+            genero: "Terror",
+            valoracion: 7,
+            tags: ["Pennywise", "floating", "payaso", "Derry"],
+            opinion: opinion,
+            "critica general": "Positiva de forma unánime"
+        };
+
+        // Borrar propiedades de un objeto:
+
+        delete(libro.opinion);
+        //console.log(libro.opinion); // mostraría undefined porque lo he borrado
+
+        console.warn("Accediendo a autor con bracket: ");
+
+        // Acceder con bracket al objeto:
+
+        console.log(libro["autor"]);
+
+        console.warn("Accediendo a autor con variable: ");
+
+        // con var:
+
+        var autor = "autor";
+
+        console.log(libro["autor"]);
+
+        // Esto de arriba es útil para acceder a propiedades cuyo nombre no cumple las reglas de propiedades de JS:
+
+        console.log(libro["critica general"]);
+
+        // Recorrer objetos con for in
+
+        console.warn("Recorrer Objeto con For In: ");
+
+        for (var propiedad in libro) {
+
+            console.log(propiedad + ": " + libro[propiedad]);
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
