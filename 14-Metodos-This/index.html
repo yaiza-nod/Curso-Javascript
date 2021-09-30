@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos y This en JS</title>
+
+    <script type="text/javascript">
+
+        var persona = {
+
+            nombre: "Yaiza",
+            edad: "22",
+            ocupacion: "Desarrolladora",
+            color: "Amarillo",
+            ciudad: "Zaragoza",
+            caminar: function () {
+                console.log("Estoy caminando!!");
+            },
+            saludar: function() {
+                console.log("¡¡Hola!! Me llamo " + this.nombre + " :)");
+
+                var funcion = function() {
+                    console.log(this.nombre);
+                }.bind(this);
+
+                funcion();
+            }
+        };
+
+        persona.saludar();
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
