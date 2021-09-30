@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzado/Hoisting en JS</title>
+
+    <script type="text/javascript">
+
+    // Orden de ejecución que sigue JS
+
+    // 1. Variables inicializadas y funciones
+    // 2. Todo lo demás
+
+        function obtenerNumero() {
+
+            function retornaNumero() {
+                return 80;
+            }
+
+            return retornaNumero();
+
+            function retornaNumero() {
+
+                return 50;
+            }
+        }
+
+        console.log(obtenerNumero()); // devuelve 50.
+
+        function obtenerNumero2() {
+
+            var retornaNumero = function() {
+
+                return 80;
+            }
+
+            return retornaNumero();
+
+            var retornaNumero = function() {
+
+                return 50;
+            }
+        }
+
+        console.log(obtenerNumero2()); // devuelve 80
+
+        function obtenerNumero3 () {
+
+            return retornaNumero();
+
+            var retornaNumero = function() {
+
+                return 80;
+            }
+
+            var retornaNumero = function() {
+
+                return 50;
+            }
+        }
+
+        console.log(obtenerNumero3()); // devolverá type error porque se declaran las variables, luego el return y luego
+        // las funciones, por lo que el return se ejecuta antes de que haya ni 80 ni 50
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
