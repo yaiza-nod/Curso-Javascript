@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recorrer Matrices en JS</title>
+
+    <script type="text/javascript">
+
+        var matriz = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+
+        // Forma 1 de recorrer matriz: bucle for (forma universal)
+
+        console.warn('For');
+
+        for (var i=0; i<matriz.length; i++) {
+
+            console.log(matriz[i]);
+        }
+
+        // Forma 2: for each
+
+        console.warn('For Each');
+
+        function mostrarElemento(elemento) {
+
+            console.log(elemento);
+        };
+
+        matriz.forEach(mostrarElemento);
+
+        // Forma 3: for of
+
+        console.warn('For Of');
+
+        for(let i of matriz) {
+
+            console.log(i);
+        };
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices Multidimensionales en JS</title>
+
+    <script type="text/javascript">
+
+        var color = 'rojo';
+        var matriz = [
+            color,
+            'Juan', 
+            10*10,
+            'Juan' + color,
+            function saludar() {alert('Hola desde Yaiza');},
+            ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', ['azul', 'verde', 'blanco']]
+        ];
+
+        // -> console.log(matriz[4]()); -> así ejecuto una función desde una matriz
+
+        // console.log(matriz[5]); -> muestro una posición de una array, que es un array tmb
+
+        console.log(matriz[5][5][0]); // muestro posicion de un array dentro de un array dentro de otro array, muestro 'azul'
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
