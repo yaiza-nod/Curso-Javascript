@@ -8,14 +8,14 @@
 
     <script type="text/javascript">
 
-        var dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+        var dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
 
         var diaEliminado = dias.shift(); // Método que elimina el primer elemento de un array, devuelve ese elemento
 
         console.log(dias); // Me devuelve el array sin el Lunes
         console.log(diaEliminado);
 
-        dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+        dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
 
         var diaEliminado = dias.pop(); // Método que elimina el último elemento de un array, devuelve ese elemento
 
@@ -23,6 +23,38 @@
         console.log(diaEliminado);
 
         // Método push: añade elemento al final de la matriz
+
+        dias.push('Sábado');
+
+        console.log(dias);
+
+        // Método splice: permite añadir o eliminar elementos de una matriz
+
+        // elimino posición 1 (martes)
+
+        dias.splice(1, 1);
+
+        console.log(dias);
+
+        // añado martes
+
+        dias.splice(1, 0, 'Martes');
+
+        console.log(dias);
+
+        // añado viernes
+
+        dias.splice(4, 0, 'Viernes');
+
+        console.log(dias);
+
+        // cambio sabado por domingo
+
+        dias.splice(5, 1, 'Domingo');
+
+        console.log(dias);
+
+
 
 
     </script>
