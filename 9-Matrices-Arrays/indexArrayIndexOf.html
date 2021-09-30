@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array IndexOf en JS</title>
+
+    <script type="text/javascript">
+
+        var colores = ['rojo', 'verde', 'blanco', 'azul'];
+
+        colores.push('morado');
+
+        console.log(colores.indexOf('morado'));
+
+        function borrarElemento(elemento, matriz) {
+            
+            var ind = matriz.indexOf(elemento);
+
+            if (ind > -1) {
+
+                matriz.splice(ind, 1);
+
+            } else {
+
+                alert('No se ha encontrado el elemento');
+            }
+        }
+
+        borrarElemento('rojo', colores);
+
+        console.log(colores);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
