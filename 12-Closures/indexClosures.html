@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures en JS</title>
+
+    <script type="text/javascript">
+
+        /* Los closures están relacionados con el ámbito de las variables (desde dentro hacia fuera) y las funciones.
+
+        Una clausura o closure es una función que guarda referencias del estado adyacente (ámbito léxico). 
+        En otras palabras, una clausura permite acceder al ámbito de una función exterior desde una función interior. 
+        En JavaScript, las clausuras se crean cada vez que una función es creada.
+        */
+
+        console.warn('Función 1: ');
+
+        function funcion1() {
+
+            var miVariable = 1;
+
+            function funcionInterna() {
+
+                console.log(miVariable);
+            }
+
+            return funcionInterna;
+        }
+
+        var variableExterna = funcion1();
+        
+        // console.log(variableExterna); -> // He retornado una funcion desde otra funcion, no 1 que es lo que vale miVariable en la funcion1
+
+        variableExterna(); // devuelve 1
+
+        console.warn('Función 2');
+
+        function funcion2() {
+
+            var miVariable = 2;
+
+            function funcionInterna() {
+
+                console.log(miVariable);
+            }
+
+            funcionExterna(funcionInterna);
+        }
+
+        function funcionExterna(funcion) {
+
+            funcion();
+        }
+
+        funcion2();
+
+        console.warn('Función esperar: ');
+
+        function espera(mensaje) {
+
+            setTimeout(function(){
+
+                console.log(mensaje);
+            }, 2000);
+        }
+
+        espera('Hola desde Yaiza!!');
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
