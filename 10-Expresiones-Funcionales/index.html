@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Funcionales en JS</title>
+
+    <script type="text/javascript">
+
+        // Las que hemos visto hasta ahora son funciones declaradas
+
+        console.warn('Funciones Declaradas: ');
+
+        funcionDeclarada(); // la llamo antes de declararla y se ejecuta
+
+        function funcionDeclarada () {
+
+            console.log('Declarada');
+        }
+
+        // Luego están las expresiones funcionales
+
+        console.warn('Expresiones Funcionales: ');
+
+        var expresionFuncional = function () {
+            console.log('Expresión');
+        };
+
+        expresionFuncional(); // Estas expresiones no son alzadas como las funciones declaradas, no puedo ejecutarla antes de ser creada
+
+        console.warn('Expresión Funcional Anónima Autoinvocada: ');
+
+        (function() { // expresión funcional anónima que se autoinvoca
+            
+            console.log('Hola desde IIFE (Inmediately Invoked Function Expression)!!!');
+        })(); // este segundo par de paréntesis hace que se autoinvoque
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
