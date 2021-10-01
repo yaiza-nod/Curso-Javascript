@@ -8,15 +8,21 @@
 
     <script type="text/javascript">
 
+    // esto es Anti-pattern
+
+    Object.prototype.saludar = function() {
+
+        console.log("Hola, soy " + this.nombre + "!!! :)");
+    };
+
         var persona = {
 
             nombre: "Yaiza",
             profesion: "Dev",
             ciudad: "Zaragoza",
-            saludar: function() {
-                console.log("Hola, soy " + this.nombre + "!!! :)");
-            }
         };
+
+        // poner el método saludar en TODAS las personas es redundante
 
         persona.saludar();
 
@@ -25,12 +31,7 @@
             nombre: "Alvaro",
             profesion: "Dev",
             ciudad: "Zaragoza",
-            saludar: function() {
-                console.log("Hola, soy " + this.nombre + "!!! :)");
-            }
         };
-
-        persona2.saludar();
         
 
     </script>
