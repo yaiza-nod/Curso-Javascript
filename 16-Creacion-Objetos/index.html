@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Objetos en JS</title>
+
+    <script type="text/javascript">
+
+    // Object Create
+
+        var BF = {
+
+            titulo: "Battlefield",
+            genero: "FPS",
+            jugar: function () {
+
+                console.log("Estoy jugando a " + this.titulo);
+            }
+        };
+
+        var BF1 = Object.create(BF);
+
+        BF1["version"] = "Battlefield 1";
+
+        console.log(BF1);
+        console.log(BF.isPrototypeOf(BF1)); // --> BF es prototipo de BF1
+        // console.log(Object.prototype.isPrototypeOf(BF)); // --> A su vez, Object es prototipo de BF
+
+        // Dos formas de crear objetos (syntax sugar): 
+
+        /*1.*/ var objeto1 = {};
+
+        /*2.*/ var objeto2 = Object.create(Object.prototype);
+
+        console.log(Object.prototype.isPrototypeOf(objeto1));
+        console.log(Object.prototype.isPrototypeOf(objeto2));
+
+        // New
+
+        function COD () {
+
+            this.titulo = "Call Of Duty",
+            this.genero = "FPS",
+            this.jugar = function () {
+
+                console.log("Estoy jugando a " + this.titulo);
+            }
+        };
+
+        var IW = new COD();
+        IW["verion"] = "Infinite Warfare";
+        console.log(COD.isPrototypeOf(IW));
+        console.log(IW);
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
